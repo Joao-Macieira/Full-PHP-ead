@@ -4,7 +4,10 @@ class homeController extends controller {
 
     public function __construct(){
         $alunos  = new Alunos();
-        $alunos -> isLogged();
+        
+        if(!$alunos->isLogged()) {
+			header("Location: ".BASE_URL."login");
+		}
 
     }
 

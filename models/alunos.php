@@ -7,7 +7,7 @@ class Alunos extends model {
         if(isset($_SESSION['lgaluno']) && !empty($_SESSION['lgaluno'])) {
             return true;
         } else {
-            header("Location: ".BASE_URL."login");
+            return false;
         }
 
     }
